@@ -55,6 +55,7 @@
     <Compile Include="InputFormatterTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="CalculatorTest.cs" />
+    <Compile Include="ValueSequencerTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SimpleCalculator\SimpleCalculator.csproj">

@@ -15,10 +15,10 @@ namespace SimpleCalculator
         }
 
         public static string FormatOperator(string op)
-        {
-            double num;
+        {            
+            double num;            
 
-            if (double.TryParse(op, out num) || op.Length > 1)
+            if ((double.TryParse(op, out num) || !(op.ToLower().Equals("add") || op.ToLower().Equals("subtract") || op.ToLower().Equals("multiply") || op.ToLower().Equals("divide"))))
             {
                 throw new NotSupportedException("Specified operation is not supported.");
             }

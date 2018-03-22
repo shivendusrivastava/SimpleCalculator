@@ -17,6 +17,10 @@ namespace SimpleCalculator
                 Console.WriteLine("Enter the operator");
                 string op = InputFormatter.FormatOperator(Console.ReadLine());
 
+                //Adding logic to swap the values if firstNumber < secondNumber
+
+                ValueSequencer.GetNumberOrder(ref firstNumber, ref secondNumber);
+
                 double result = Calculator.Calculate(firstNumber, secondNumber, op);
                 Console.WriteLine(result);
             }

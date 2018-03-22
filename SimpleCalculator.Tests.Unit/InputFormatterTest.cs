@@ -63,37 +63,44 @@ namespace SimpleCalculator.Tests.Unit
         }
 
         [TestMethod]
-        [ExpectedException(typeof(NotSupportedException))]
-        public void ConfirmAddNamedOperationIsNotSupported()
+        
+        public void ConfirmAddNamedOperation()
         {
             string op = "add";
             string formattedOp = InputFormatter.FormatOperator(op);
+            Assert.AreEqual("add", formattedOp);
         }
 
-        [TestMethod]
-        [ExpectedException(typeof(NotSupportedException))]
-        public void ConfirmSubtractNamedOperationIsNotSupported()
+        [TestMethod]       
+        public void ConfirmSubtractNamedOperation()
         {
             string op = "subtract";
             string formattedOp = InputFormatter.FormatOperator(op);
+            Assert.AreEqual("subtract", formattedOp);
         }
 
-        [TestMethod]
-        [ExpectedException(typeof(NotSupportedException))]
-        public void ConfirmMultiplyNamedOperationIsNotSupported()
+        [TestMethod]        
+        public void ConfirmMultiplyNamedOperation()
         {
             string op = "multiply";
             string formattedOp = InputFormatter.FormatOperator(op);
+            Assert.AreEqual("multiply", formattedOp);
+        }
+
+        [TestMethod]        
+        public void ConfirmDivideNamedOperation()
+        {
+            string op = "divide";
+            string formattedOp = InputFormatter.FormatOperator(op);
+            Assert.AreEqual("divide", formattedOp);
         }
 
         [TestMethod]
         [ExpectedException(typeof(NotSupportedException))]
-        public void ConfirmDivideNamedOperationIsNotSupported()
+        public void ConfirmInvalidOperatorsAreNotSupported_Partially()
         {
-            string op = "divide";
+            string op = "modulo";
             string formattedOp = InputFormatter.FormatOperator(op);
         }
-
-
     }
 }

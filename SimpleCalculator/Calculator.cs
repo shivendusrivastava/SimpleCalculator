@@ -10,15 +10,19 @@ namespace SimpleCalculator
             switch (op)
             {
                 case "+":
+                case "add":
                     result = firstNum + secondNum;
                     break;
                 case "-":
+                case "subtract":
                     result = firstNum - secondNum;
                     break;
                 case "*":
+                case "multiply":
                     result = firstNum * secondNum;
                     break;
                 case "/":
+                case "divide":
                     result = firstNum / secondNum;
                     break;
                 default:
